@@ -19,14 +19,7 @@ Also make sure that **SSL/TLS** -> **Origin Server** -> **Authenticated Origin P
 `apt-get install nginx`
 NginX is used to serve our website on port 80 and 443.
 
-## Create Cloudflare Certificate File
-`ctouch /etc/ssl/certs/cloudflare.crt`
-Create the cloudflare certificate file.
-
-Copy the contents of this: https://pastebin.com/dmi6AiFD into `cloudflare.crt`
-
 ## Create a Cloudflare Origin Certificate
-
 This will be also be used for secure connections with SSL.
 
 ![Create a certificate](https://i.ibb.co/4Jr6Zx1/cloudflare-origin-certificate.png)
