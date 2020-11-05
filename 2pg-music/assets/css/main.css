@@ -1,0 +1,9 @@
+@import './old.css';
+@import './variables.css';
+
+.col-4 {
+  order: 0 !important;
+}
+.col-8 {
+  order: 1 !important;
+}
