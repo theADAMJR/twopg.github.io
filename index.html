@@ -7,36 +7,83 @@
 	<title>2PG Docs</title>
 
 	<style>
-		:root {
-			--background-primary: #2C2F33;
-			--background-secondary: #23272A;
+		header {
+			background: linear-gradient(
+				to right, 
+				hsl(98 100% 62%), 
+				hsl(204 100% 59%)
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-align: center;
+		}
 
-			--primary: #7289DA;
-			--font: #FFFFFF;
+		h1 {
+			font-size: 10vmin;
+			line-height: 1.1;
 		}
-		h1,
-		h2 {
-			color: var(--primary) !important;
+
+		body {
+			background: hsl(204 100% 5%);
+			
+			min-block-size: 100%;
+			min-inline-size: 100%;
+			box-sizing: border-box;
+			display: grid;
+			place-content: center;
+			font-family: system-ui;
+			font-size: min(200%, 5vmin);
 		}
-		body,
-		footer {
-			background-color: var(--background-primary) !important;
+
+		h1, p, body {
+			margin: 0;
 		}
-		a,
-		body,
-		label {
-			color: var(--font) !important;
+
+		p {
+			font-family: "Dank Mono", ui-monospace, monospace;
 		}
-		footer,
-		ul {
-			border-color: transparent !important;
+
+		a {
+			text-decoration: none;
+		}
+
+		html {
+			block-size: 100%;
+			inline-size: 100%;
+		}
+
+		div {
+			text-align: center;
+		}
+
+		img {
+			margin: 25px 25px 0 0;
+			max-width: 384px;
 		}
 	</style>
 </head>
 <body>
-  <div>
-		<a href="/music">Music</a> - <span>Simple music module, built with TypeScript, used by 2PG.</span>
-		<a href="/oauth">OAuth</a> - <span>Cloned from disco-oauth, but with TypeScript support, and less errors.</span>
+  <header>
+		<h1>2PG [twopg]</h1>
+		<p>Making Discord applications more accessible to everyone.</p>
+	</header>
+	
+	<div>
+		<a href="/oauth">
+			<img src="https://socialify.git.ci/twopg/oauth/image?description=1&font=Inter&logo=https://cdn.pixabay.com/photo/2016/12/18/12/49/cyber-security-1915628_960_720.png&owner=1&pattern=none&theme=Dark" alt="OAuth">
+		</a>
+		<a href="/music">
+			<img src="https://socialify.git.ci/twopg/music/image?logo=https://cdn.pixabay.com/photo/2015/12/09/22/09/music-1085655_960_720.png&description=1&owner=1&pattern=none&theme=Dark" alt="Music" />
+		</a>
+	</div>
+	
+	<div>
+		<a href="https://github.com/twopg/dashboard">
+			<img src="https://socialify.git.ci/twopg/dashboard/image?logo=https://cdn.pixabay.com/photo/2013/07/12/12/30/cogwheel-145804_960_720.png&description=1&owner=1&pattern=none&theme=Dark" alt="Dashboard" />    
+		</a>
+		<a href="https://github.com/twopg/bot">
+			<img src="https://socialify.git.ci/twopg/bot/image?logo=https%3A%2F%2F2pg.xyz%2Fassets%2Fimg%2F2pg-avatar-transparent.svg&description=1&owner=1&pattern=none&theme=Dark" alt="Bot" />
+		</a>
 	</div>
 </body>
 </html>
