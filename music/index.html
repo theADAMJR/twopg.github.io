@@ -69,19 +69,19 @@
 				</a>
 				<p>Simple music module, built with TypeScript, used by 2PG.</p>
 				<p><a href="https://discord.io/twopg"><img src="https://img.shields.io/discord/685862664223850497?color=46828d&label=Support&style=for-the-badge" alt="Discord"></a></p>
-				<p><strong>Docs</strong> - <a href="https://theadamjr.github.io/2pg-music">https://theadamjr.github.io/2pg-music</a></p>
+				<p><strong>Docs</strong> - <a href="https://twopg.github.io/music">https://twopg.github.io/music</a></p>
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 					<h2>Example</h2>
 				</a>
-				<p><code>npm i -S 2pg-music discord.js</code></p>
+				<p><code>npm i -S @2pg/music discord.js</code></p>
 				<p><strong>ES6</strong>:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Client } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;discord.js&#x27;</span>;
-<span class="hljs-keyword">import</span> { MusicClient } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;2pg-music&#x27;</span>;
+<span class="hljs-keyword">import</span> { MusicClient } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@2pg/music&#x27;</span>;
 
 <span class="hljs-keyword">const</span> music = <span class="hljs-keyword">new</span> MusicClient();
 <span class="hljs-keyword">const</span> bot = <span class="hljs-keyword">new</span> Client();
 
-music.on(<span class="hljs-string">&#x27;trackStart&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">{ textChannel }, track</span>) =&gt;</span> textChannel?.send(<span class="hljs-string">`\`<span class="hljs-subst">${track.title}</span>\` - **<span class="hljs-subst">${track.requestor}</span>** started.`</span>));
+music.on(<span class="hljs-string">&#x27;trackStart&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">player, track</span>) =&gt;</span> player.textChannel?.send(<span class="hljs-string">`\`<span class="hljs-subst">${track.title}</span>\` - **<span class="hljs-subst">${track.requestor}</span>** started.`</span>));
 
 bot.on(<span class="hljs-string">&#x27;message&#x27;</span>, <span class="hljs-keyword">async</span> (msg) =&gt; {
   <span class="hljs-keyword">if</span> (msg.author.bot) <span class="hljs-keyword">return</span>;
